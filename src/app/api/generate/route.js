@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 if (!configuration.apiKey) {
@@ -25,7 +25,7 @@ export async function POST(req) {
       prompt: body.prompt,
       model: "text-davinci-003",
       temperature: 0.7,
-      max_tokens: 120,
+      max_tokens: 250,
     });
     return NextResponse.json(response.data.choices[0].text);
   } catch (e) {
