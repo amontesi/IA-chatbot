@@ -46,11 +46,11 @@ export default function Home() {
   };
 
   const formatResponse = (response: Result) => {
-    const days = response?.split("\n\n");
+    const days = response.result?.split("\n\n");
 
     return (
       <div>
-        {days?.map((day, index) => (
+        {days?.map((day: string, index: number) => (
           <p key={index}>{day.trim()}</p>
         ))}
       </div>
