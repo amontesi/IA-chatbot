@@ -45,8 +45,8 @@ export default function Home() {
     setPrompt({ prompt: e.target.value });
   };
 
-  const formatResponse = (response: Result) => {
-    const days = response.result?.split("\n\n");
+  const formatResponse = (response: Result | any) => {
+    const days = response?.split("\n\n");
 
     return (
       <div>
